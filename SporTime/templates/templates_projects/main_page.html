@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      background-color: #0D0D0D;
+      background-image: url('/media/main_background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      height: 100vh;
+    }
+
+    .content {
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      width: 300px;
+      height: 270px;
+    }
+    {% block content %}{% endblock %}
+
+  </style>
+</head>
+<body>
+
+<a href="{% url 'main_page' %}"><img src="/media/logo.png" alt="Logo" class="logo"></a>
+{% block content_source %}{% endblock %}
+  <div class="container">
+    <div class="content">
+      <h1></h1>
+      <p></p>
+    </div>
+  </div>
+
+</body>
+</html>

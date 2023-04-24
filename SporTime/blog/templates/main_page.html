@@ -1,0 +1,59 @@
+{% extends 'templates_projects/main_page.html' %}
+
+{% block content %}
+    .login {
+      position: absolute;
+      top: 314px;
+      left: 135px;
+      font-size: 24px;
+      color: #31B7A6;
+      text-decoration: none;
+    }
+    .login:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+    .trainers {
+      position: absolute;
+      top: 364px;
+      left: 135px;
+      font-size: 24px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    .trainers:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+    .attendance {
+      position: absolute;
+      top: 414px;
+      left: 135px;
+      font-size: 24px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .attendance:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+     .about {
+      position: absolute;
+      top: 464px;
+      left: 135px;
+      font-size: 24px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    .about:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+{% endblock %}
+
+{% block content_source %}
+<a href="{% url 'login' %}" class="login">Log In</a>
+<a href="{% url 'trainers_list' %}" class="trainers">Trainers</a>
+<a href="{% url 'attendance' %}" class="attendance">Attendance</a>
+<a href="#" class="about">About</a>
+{% endblock %}

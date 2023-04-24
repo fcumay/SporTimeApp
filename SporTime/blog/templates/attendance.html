@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      background-color: #0D0D0D;
+      background-image: url('/media/background_attendance.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      height: 100vh;
+    }
+
+    .content {
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      width: 300px;
+      height: 270px;
+    }
+
+    .login {
+      position: absolute;
+      top: 314px;
+      left: 135px;
+      font-size: 24px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    .login:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+    .trainers {
+      position: absolute;
+      top: 364px;
+      left: 135px;
+      font-size: 24px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    .trainers:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+    .attendance {
+      position: absolute;
+      top: 414px;
+      left: 135px;
+      font-size: 24px;
+      color: #31B7A6;
+      text-decoration: none;
+    }
+    .attendance:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+     .about {
+      position: absolute;
+      top: 464px;
+      left: 135px;
+      font-size: 24px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    .about:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+    .number {
+      position: absolute;
+      top: 300px;
+      left: 1030px;
+      transform: translate(-50%, -50%);
+      font-size: 160px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<a href="{% url 'main_page' %}"><img src="/media/logo.png" alt="Logo" class="logo"></a>
+<a href="{% url 'login' %}" class="login">Log In</a>
+<a href="{% url 'trainers_list' %}" class="trainers">Trainers</a>
+<a href="{% url 'attendance' %}" class="attendance">Attendance</a>
+<a href="#" class="about">About</a>
+  <div class="container">
+    <div class="content">
+      <h1></h1>
+      <p></p>
+      <div class="number">{{ random_number }}</div>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>

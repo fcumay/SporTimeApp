@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      background-color: #0D0D0D;
+      background-image: url('/media/background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .logo {
+      position: absolute;
+      width: 300px;
+      height: 270px;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .rectangle {
+      position: absolute;
+      width: 562px;
+      height: 674px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 140px;
+      background-color: rgba(30, 30, 30, 0.92);
+      z-index: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .input-field {
+      box-sizing: border-box;
+      position: absolute;
+      width: 391px;
+      height: 100px;
+      left: 86px;
+      top: 337px;
+      background: #D9D9D9;
+      border: 7px solid #31B7A6;
+      border-radius: 70px;
+      padding: 20px;
+      font-size: 20px;
+      color: #555555;
+    }
+    .button {
+      position: absolute;
+      width: 276px;
+      height: 72px;
+      left: 143px;
+      top: 474.5px;
+      background: #31B7A6;
+      backdrop-filter: blur(2px);
+      border-radius: 70px;
+      border: none;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 400;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif; /* Добавлено */
+    }
+
+  </style>
+</head>
+<body>
+
+<a href="{% url 'main_page' %}"><img src="/media/logo.png" alt="Logo" class="logo"></a>
+
+
+  <div class="container">
+    <div class="content">
+      <h1></h1>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="rectangle">
+    <input type="text" placeholder="Enter text here" class="input-field">
+    <button class="button">Log In</button>
+  </div>
+
+</body>
+</html>
